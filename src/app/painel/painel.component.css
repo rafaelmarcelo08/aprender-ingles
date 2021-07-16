@@ -1,0 +1,10 @@
+.jumbotron {
+    background: whitesmoke;
+    margin-top: 20px; 
+    border-radius: 9px;
+    padding: 30px;
+}
+
+.button {
+    margin-top: 20px;
+}
