@@ -13,6 +13,7 @@
 > - JavaScript
 > - Angular
 > - Typescript
+> - BootStrap
 > - Git (Controle de Versionamento)
 
 ## 🚀 Como executar o projeto
