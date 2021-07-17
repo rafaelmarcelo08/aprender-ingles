@@ -17,7 +17,10 @@
                 <p>{{ frases[3].fraseEng }}</p>
 
                 <div class="form-group">
-                    <textarea class="form-control" rows="3"></textarea>
+                    <textarea 
+                    class="form-control" 
+                    rows="3"
+                    (input) ='atualizarResposta($event)'></textarea>
                 </div>
             </div>
         </div>
