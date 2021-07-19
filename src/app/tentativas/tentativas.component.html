@@ -1,3 +1,6 @@
-<img [src]="coracaoVazio" alt="">
+<!-- <img [src]="coracaoVazio" alt="">
 <img [src]="coracaoCheio" alt="">
-<img [src]="coracaoCheio" alt="">
+<img [src]="coracaoCheio" alt=""> -->
+
+<img *ngFor="let coracao of coracoes" 
+[src]='coracao.verificarCoracao()'/>
