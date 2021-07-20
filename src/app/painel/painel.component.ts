@@ -19,6 +19,8 @@ export class PainelComponent implements OnInit {
 
   public progresso: number = 0;
 
+  public tentativas: number = 3;
+
   constructor() {
     this.atualizarRodada();
   }
@@ -28,13 +30,12 @@ export class PainelComponent implements OnInit {
 
   public atualizarResposta(resposta: Event): void {
     this.respostaUsuario = (<HTMLInputElement>resposta.target).value;
-    //console.log(this.resposta);
   }
 
   public verificarResposta(): void {
+    console.log(this.tentativas);
     if (this.rodadaFrase.frasePtBr == this.respostaUsuario) {
       /**Trocar a pergunda da rodada */
-      console.log(this.rodada);
       this.rodada++;
 
       if (this.rodada < 4) {
@@ -43,7 +44,14 @@ export class PainelComponent implements OnInit {
 
       /** Aumento de progresso */
       this.progresso += 25;
+
+    } else {
+      this.tentativas--;
+      if (this.tentativas == 0) {
+        alert('Voce perdeu todas as tentativas');
+      }
     }
+    console.log(this.tentativas);
   }
 
   public atualizarRodada(): void {
