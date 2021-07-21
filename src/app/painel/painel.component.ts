@@ -33,7 +33,7 @@ export class PainelComponent implements OnInit {
   }
 
   public verificarResposta(): void {
-    console.log(this.tentativas);
+
     if (this.rodadaFrase.frasePtBr == this.respostaUsuario) {
       /**Trocar a pergunda da rodada */
       this.rodada++;
@@ -47,11 +47,12 @@ export class PainelComponent implements OnInit {
 
     } else {
       this.tentativas--;
-      if (this.tentativas == 0) {
+      if (this.tentativas < 0) {
         alert('Voce perdeu todas as tentativas');
+        this.tentativas = 0;
       }
     }
-    console.log(this.tentativas);
+
   }
 
   public atualizarRodada(): void {
