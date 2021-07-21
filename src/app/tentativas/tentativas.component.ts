@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 import { CoracaoModel } from '../shared/coracao.model';
 
@@ -7,7 +7,9 @@ import { CoracaoModel } from '../shared/coracao.model';
   templateUrl: './tentativas.component.html',
   styleUrls: ['./tentativas.component.css']
 })
-export class TentativasComponent implements OnInit {
+export class TentativasComponent implements OnInit, OnChanges {
+
+  public teste: number = 0;
 
   public coracoes: CoracaoModel[] = [
     new CoracaoModel(true),
@@ -19,12 +21,15 @@ export class TentativasComponent implements OnInit {
   public tentativas!: number;
 
   constructor() {
-    console.log(this.coracoes);
-    
+    console.log('constructor: ' + this.tentativas);
+  }
+
+  ngOnChanges(): void {
+    console.log('Vidas: ngOnChanges ' + this.tentativas);
   }
 
   ngOnInit(): void {
-    console.log('Vidas: ' + this.tentativas);
+    console.log('Vidas: ngOnInit' + this.tentativas);
   }
 
 }

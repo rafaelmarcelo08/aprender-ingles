@@ -18,4 +18,3 @@ export const FRASES: Frase[] = [
         frasePtBr: 'Eu como pão'
     }
 ];
-

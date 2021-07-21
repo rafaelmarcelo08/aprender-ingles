@@ -60,4 +60,5 @@ export class PainelComponent implements OnInit {
     /**Limpar a resposta */
     this.respostaUsuario = '';
   }
+
 }
