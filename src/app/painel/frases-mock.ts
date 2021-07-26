@@ -7,7 +7,7 @@ export const FRASES: Frase[] = [
     },
     {
         fraseEng: 'I watch tv',
-        frasePtBr: 'Eu assito tv'
+        frasePtBr: 'Eu assisto tv'
     },
     {
         fraseEng: 'How are you?',
