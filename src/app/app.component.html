@@ -6,8 +6,8 @@
 </div>
 
 <ng-template #fimDejogo>
-
-    <div class="container" style="margin: 50px">
+    <div *ngIf="tipoEncerramento == 'Derrota'; else fimDeJogoVitoria" 
+    class="container" style="margin: 50px">
         <div class="row">
             <div class="col">
                 <h3 style="color: red">
@@ -16,6 +16,16 @@
             </div>
         </div>
     </div>
+</ng-template>
 
-
+<ng-template #fimDeJogoVitoria>
+    <div class="container" style="margin: 50px">
+        <div class="row">
+            <div class="col">
+                <h3 style="color: green">
+                    Parabéns você acertou todas as respostas ! :)
+                </h3>
+            </div>
+        </div>
+    </div>
 </ng-template>

@@ -9,9 +9,10 @@ export class AppComponent {
   title = 'aprender-inglês';
 
   public jogoEmAndamento: boolean = true;
+  public tipoEncerramento!: String;
 
   public encerrarJogo(tipo: string): void {
-    console.log(tipo);
     this.jogoEmAndamento = false;
+    this.tipoEncerramento = tipo;
   }
 }
