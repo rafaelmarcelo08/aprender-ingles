@@ -21,7 +21,6 @@ export class TentativasComponent implements OnInit, OnChanges {
   public tentativas!: number;
 
   constructor() {
-    console.log('constructor: ' + this.tentativas);
   }
 
   ngOnChanges(): void {

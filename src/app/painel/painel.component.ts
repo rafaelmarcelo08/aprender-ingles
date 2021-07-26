@@ -34,7 +34,6 @@ export class PainelComponent implements OnInit, OnDestroy {
     this.atualizarRodada();
   }
   ngOnDestroy(): void {
-    console.log('componente painel foi destruido');
   }
 
   ngOnInit(): void {
@@ -79,5 +78,4 @@ export class PainelComponent implements OnInit, OnDestroy {
     /**Limpar a resposta */
     this.respostaUsuario = '';
   }
-
 }
